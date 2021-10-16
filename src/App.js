@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Home from './components/Home';
+import Navigation from './components/Navigation';
+import Favourite from './components/Favourite';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+// export const API_KEY = 'b6becf9b';
+
+// import { API_KEY } from '../App'
+
+// useEffect(() => {
+//     const fetchData = fetch('http://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}').then((resp) => {
+//       resp.json().then((finalResp) => {
+//         console.log(finalResp);
+//         setMovieList(resp.data.Search);
+//       })
+//     })
+//   }, []);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/favourite" component={Favourite} />
+        </Switch>
+      </Router>
+    </>
+  )
 }
+
+
 
 export default App;
