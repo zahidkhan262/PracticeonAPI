@@ -6,22 +6,42 @@ body{background: #161c2d;}
 
 .d-flex-2{display: flex; align-items: center;}
 
-.container{width: 100%; padding: 20px;}
+.containers{width: 100%; padding: 20px;}
 
 nav{background: #495fef; padding: 20px 40px; width: 100%;}
 .logo{font-size: 22px; color: #fff; font-weight: bold;}
 nav ul{padding: 0; margin: 0;}
-nav ul li{list-style: none; display: inline-block; padding: 0 20px;}
+nav ul li{list-style: none; display: inline-block; padding: 0 20px; }
 nav ul li a{font-size: 18px; color: #fff; font-weight: bold; text-decoration: none;}
 nav ul li a:hover{color: #161c2d;}
 
-#bars{font-size: 22px; color: #fff; display: none;}
+#bars{font-size: 22px; color: #fff; display: block;}
+#bars:hover{color: crimson;}
+.search{border: 1px solid #bbbbbb; cursor: pointer; border-radius: 10px; padding: 0 12px; transition: 0.3s;}
+.search:hover{border: 1px solid #5779d4;}
+.search input{border: none; outline: none; background: transparent; padding: 8px 12px; color: #fff; letter-spacing: 1px;}
+.search .search-icon{color: #fff; font-size: 17px;}
+.top{margin-top: 100px; color: #fff;}
+.btn{background: #495fef; padding: 6px 10px; color: #fff; border: none; outline: 0;}
+
+
+table{width: 100%; background:#bbbbbb; }
+thead{font-size: 18px; font-weight: bold; color: #000;}
+tbody{color: #111;}
+tr:hover{background: #fff; cursor: pointer;}
+td{text-align: center;}
+
+
+
+
+
+
 
 @media(max-width:776px){
+    .containers{width: 100%; padding: 10px;}
     nav{padding: 20px;}
-    nav ul{width: 100%; position: absolute; top: 67px; left: 0; text-align: center; background: #495fef; transition: 0.4s;}
-    nav ul li{display: block; padding: 20px 0;}
-
+    nav ul{width: 100%; position: absolute; top: 68px; left: 0; text-align: center; background: #495fef; transition: 0.4s;}
+    nav ul li{display: block; padding: 20px 0;  transition: 0.4s;}
     #bars{display: block; transition: 0.4s;}
-    #bars:hover{color: crimson;}
+   
 }
